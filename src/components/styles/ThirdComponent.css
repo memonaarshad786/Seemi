@@ -1,0 +1,100 @@
+.third-container {
+  width: 100%;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 240px 80px 20px 80px;
+  color: white;
+}
+
+.third-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Left Section */
+.third-left {
+  max-width: 320px;
+}
+
+.third-left h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.third-left p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #dbe7f3;
+}
+
+.start-btn {
+  background-color: #ff7a2f;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.start-btn:hover {
+  opacity: 0.85;
+}
+
+.social-icons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons i {
+  background: white;
+  color: #0b3556;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Columns */
+.third-column h4 {
+  color: #ff7a2f;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+.third-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.third-column ul li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #dbe7f3;
+  transition: 0.3s ease;
+}
+
+.third-column ul li:hover {
+  color: white;
+}
+
+/* Contact */
+.contact-list li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}

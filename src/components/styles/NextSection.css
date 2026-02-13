@@ -1,0 +1,161 @@
+.next-section {
+  padding: 60px 20px 100px;
+  background: #ffffff;
+}
+
+.support-card {
+  max-width: 1100px;
+  margin: 0 auto 48px;
+  background: #eef9fb;
+  border-radius: 22px;
+  padding: 36px;
+}
+
+.card-inner {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.card-left {
+  flex: 0 0 44%;
+}
+
+.card-img {
+ margin: auto;
+  display: block;
+  width: 1000;
+height: 464.1300048828125;
+opacity: 1;
+top: 3539px;
+left: 460px;
+border-radius: 40px;
+
+}
+
+.card-right {
+  flex: 1 1 56%;
+}
+
+.support-kicker {
+  color: #ff7a3d;
+  font-size: 13px;
+  margin: 0 0 8px;
+}
+
+.support-title {
+  font-size: 40px;
+  margin: 0 0 18px;
+  line-height: 1.05;
+  color: #0b2433;
+}
+
+.support-title span {
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-color: rgba(99, 47, 255, 0.12);
+  text-underline-offset: 8px;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg,#5b5cff,#4a43d8);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 22px;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(74,67,216,0.18);
+}
+
+.management-section {
+  position: relative;
+  padding: 40px 0 80px;
+  overflow: visible;
+}
+
+.management-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.eyebrow {
+  color: #ff7a3d;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.manage-title {
+  font-size: 28px;
+  margin: 0 0 12px;
+  color: #0b2433;
+}
+
+.manage-desc {
+  color: #6b7780;
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto 22px;
+}
+
+.btn-secondary {
+  background: linear-gradient(180deg,#5b5cff,#4a43d8);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 28px;
+  cursor: pointer;
+}
+
+
+/* Decorative images when positioned around the management block */
+.management-section .deco {
+  position: absolute;
+  width: 120px;
+  height: auto;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+.management-section .deco.left {
+  left: 20px;
+  bottom: 0;
+}
+
+.management-section .deco.right {
+  right: 20px;
+  bottom: -10px;
+}
+
+/* When the management section uses the `flex` layout, place items in a row */
+.management-section.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 24px 16px;
+}
+
+.management-section.flex .deco {
+  position: static;
+  opacity: 1;
+  pointer-events: auto;
+  width: 140px;
+}
+
+.management-section.flex .management-inner {
+  text-align: center;
+  max-width: 680px;
+}
+
+
+@media (max-width: 880px) {
+  .card-inner { flex-direction: column-reverse; text-align: center; }
+  .card-left { width: 100%; }
+  .support-title { font-size: 28px; }
+  .management-section.flex { flex-direction: column; gap: 12px; }
+  .management-section.flex .management-inner { text-align: center; }
+  .management-section.flex .deco { display: none; }
+}
+
