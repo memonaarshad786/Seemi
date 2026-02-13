@@ -89,12 +89,12 @@ export default function SeamlessIntegrations() {
                 </div>
                 <div className="team-members">
                   <div className="member-avatar" style={{backgroundColor: '#9ADA4C'}}>2</div>
-                  <img src="/src/Assets/1st-comp/Group.png" alt="member" className="member-img" />
+                  <img src="../Assets/1st-comp/Group.png" alt="member" className="member-img" />
                 </div>
               </div>
               <div className="card2-decorative">
-                <img src="/src/Assets/1st-comp/Mask Group.png" alt="deco1" className="deco-img" />
-                <img src="/src/Assets/1st-comp/Vector.png" alt="deco2" className="deco-img" />
+                <img src="../Assets/1st-comp/Mask Group.png" alt="deco1" className="deco-img" />
+                <img src="../Assets/1st-comp/Vector.png" alt="deco2" className="deco-img" />
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function SeamlessIntegrations() {
                 <a href="#" className="view-details">View Details →</a>
               </div>
               <div className="logo-section">
-                <img src="/src/Assets/1st-comp/Seemi-Logo-05-1024x224.png 1.png" alt="seemli" className="seemli-logo" />
+                <img src="../Assets/1st-comp/Seemi-Logo-05-1024x224.png 1.png" alt="seemli" className="seemli-logo" />
               </div>
               <div className="add-tutor-btn">
                 <button>+ Add New Tutor</button>
@@ -188,7 +188,7 @@ export default function SeamlessIntegrations() {
               </div>
               <div className="team-members">
                 <div className="member-avatar" style={{backgroundColor: '#9ADA4C'}}>2</div>
-                <img src="/src/Assets/1st-comp/Group.png" alt="member" className="member-img" />
+                <img src="../Assets/1st-comp/Group.png" alt="member" className="member-img" />
               </div>
             </div>
           </div>

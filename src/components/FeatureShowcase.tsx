@@ -26,7 +26,7 @@ export default function FeatureShowcase() {
             {/* Main illustration box */}
             <div className="illustration-box">
               <div className="dotted-circle-orange"></div>
-              <img src="/src/Assets/scndcomp/comp2.png" alt="Lesson Scheduling Illustration" className="illustration-image" />
+              <img src="../Assets/scndcomp/comp2.png" alt="Lesson Scheduling Illustration" className="illustration-image" />
             </div>
           </div>
         </div>
