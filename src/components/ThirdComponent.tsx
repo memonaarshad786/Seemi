@@ -5,7 +5,7 @@ const ThirdComponent: React.FC = () => {
   return (
     <footer
       className="third-container"
-      style={{ backgroundImage: `url(../Assets/thirdcomp/blue-background.png)` }}
+      style={{ backgroundImage: `url(/Assets/thirdcomp/blue-background.png)` }}
     >
       <div className="third-content pt-6">
         

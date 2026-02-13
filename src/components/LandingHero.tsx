@@ -36,8 +36,8 @@ export default function LandingHero() {
         <div className="hero-container">
           <div className="hero-left">
             <div className="logo-section">
-              <img src="../Assets/1st-comp/Seemi-Logo-05-1024x224.png 1.png" alt="Seemi Logo" className="seemi-logo" />
-                              <img src="../Assets/1st-comp/Vector.png" alt="vector Icon" className="comp-1-firstimg" />
+              <img src="/Assets/1st-comp/Seemi-Logo-05-1024x224.png 1.png" alt="Seemi Logo" className="seemi-logo" />
+                              <img src="/Assets/1st-comp/Vector.png" alt="vector Icon" className="comp-1-firstimg" />
 
             </div>
 
@@ -150,14 +150,14 @@ export default function LandingHero() {
             </div>
 
             <div className="icon-building">
-                              <img src="../Assets/1st-comp/Group.png" alt="Education Icon" className="comp-1-secondimg" />
+                              <img src="/Assets/1st-comp/Group.png" alt="Education Icon" className="comp-1-secondimg" />
             </div>
           </div>
           
         </div>
   
       </div>
-                <img src="../Assets/1st-comp/Mask Group.png" alt="Building Icon" className="icon-img" />
+                <img src="/Assets/1st-comp/Mask Group.png" alt="Building Icon" className="icon-img" />
 
       
 
