@@ -11,6 +11,16 @@
   margin-left: auto;
   margin-right: auto;
 }
+.orange-arrow{
+  position: absolute;
+  right: 0%;
+    width: 22px;
+  height: 22px;
+  color: rgba(245, 158, 11, 1);
+  border-radius: 4px;
+  font-size: 1rem;
+    z-index: 6;
+}
 
 .integrations-badge {
   display: inline-block;
@@ -57,12 +67,35 @@
   flex-direction: column;
   gap: 1rem;
   position: relative;
+  width: auto;
+  height: auto;
+  opacity: 1;
+
 }
 
 .feature-card:nth-child(1) {
-  background: linear-gradient(135deg, #f1f1f2 0%, #E9ECEF 100%);
+background: rgba(254, 236, 236, 1);
+}
+.feature-card:nth-child(2){
+  background: rgba(250, 252, 238, 1);
 }
 
+/* Specific styling to match design for the 3rd card */
+.feature-card:nth-child(3) {
+  background: #e9f5ff; /* light blue background */
+  padding: 1.75rem;
+  box-shadow: 0 8px 24px rgba(43, 155, 255, 0.08);
+}
+
+.feature-card:nth-child(4) {
+background: rgba(236, 254, 241, 1);
+}
+.feature-card:nth-child(5) {
+background: rgba(238, 238, 252, 1);
+}
+.feature-card:nth-child(6) {
+  background: rgba(251, 238, 238, 1);
+}
 .feature-card::before {
   content: "";
   position: relative;
@@ -70,6 +103,9 @@
   left: 0;
   right: 0;
   height: 4px;
+}
+.team-tracking{
+  display: flex;
 }
 
 .feature-card::after {
@@ -359,9 +395,10 @@
 }
 
 .deco-img {
-  max-width: 80px;
+  max-width: auto;
   max-height: 60px;
   object-fit: contain;
+  margin-right: 20px;
 }
 
 /* CARD 3 STYLES */
@@ -372,16 +409,86 @@
   width: 100%;
 }
 
+.card3-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
 .feedback-section {
+    display: flex;
   background: white;
-  border-radius: 8px;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 6px 18px rgba(43, 155, 255, 0.06);
+  max-width: 460px;
 }
 
 .feedback-section h4 {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.35rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1f3f5f;
+}
+  /* .list-card{
+    display: flex;
+  } */
+
+.feedback-section p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.logo-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 12px;
+  padding: 0.5rem 0;
+}
+
+.seemli-logo {
+  max-height: 48px;
+  object-fit: contain;
+}
+
+.add-tutor-btn {
+  padding: 0.75rem 0;
+}
+
+.add-tutor-btn button {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 2px dashed #2b9bff;
+  background: rgba(43, 155, 255, 0.03);
+  border-radius: 8px;
   font-size: 0.95rem;
-  font-weight: 600;
-  color: #2d3748;
+  color: #1261a8;
+  cursor: pointer;
+}
+
+.add-tutor-btn button:hover {
+  background: rgba(43, 155, 255, 0.06);
+}
+
+.dashboard-info {
+  background: white;
+  padding: 0.65rem 0.85rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 12px rgba(43, 155, 255, 0.04);
+}
+
+.dashboard-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #1f3f5f;
 }
 
 .feedback-section p {
@@ -400,13 +507,61 @@
 
 .logo-section {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   padding: 0.5rem 0;
 }
 
 .seemli-logo {
   max-height: 30px;
   object-fit: contain;
+}
+
+/* Mini cards to the right of the Seemii logo */
+.mini-cards {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-left: 12px;
+  margin-top: -10px
+}
+
+.mini-card {
+  width: 46px;
+  height: 58px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transform: rotate(-10deg);
+}
+
+.mini-card--pink {
+background: #CD5879;
+}
+.mini-card--purple {
+background: #8958CD;
+}
+
+.mini-card--white {
+  background: #ffffff;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+  transform: rotate(6deg);
+}
+
+.mini-card .mini-card-top {
+  font-size: 9px;
+  opacity: 0.9;
+}
+
+.mini-card .mini-card-bottom {
+  font-size: 14px;
+  margin-top: 2px;
 }
 
 .add-tutor-btn {
@@ -562,6 +717,11 @@
   width: 100%;
 }
 
+/* position context for absolute arrow */
+.card6-content {
+  position: relative;
+}
+
 .effortless-section {
   background: white;
   padding: 1rem;
@@ -587,17 +747,39 @@
 }
 
 .progress-bar-v2 {
-  width: 70%;
-  height: 6px;
+  width: 50%;
+  height: 8px;
   background: #f59e0b;
   border-radius: 3px;
+}
+
+/* Floating gold-bordered arrow icon positioned above the right corner of the feedback box */
+.arrow-down {
+  right: 0;
+  top: -12px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(221, 184, 84, 1);
+  border-radius: 4px;
+  z-index: 6;
+  font-size: 1rem;
+    transform: rotate(45deg);
+    float: right;
+
+}
+
+/* slightly lift the icon on hover for interactivity */
+.arrow-down:hover {
+  transform: translateY(-2px);
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
   .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 2fr);
   }
 
   .integrations-title {
@@ -612,7 +794,6 @@
 
   .features-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
 
   .integrations-title {

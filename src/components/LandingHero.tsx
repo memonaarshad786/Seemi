@@ -31,7 +31,7 @@ export default function LandingHero() {
   }
 
   return (
-    <section className="landing-hero">
+    <section >
       <div className="hero-wrapper">
         <div className="hero-container">
           <div className="hero-left">
@@ -157,7 +157,7 @@ export default function LandingHero() {
         </div>
   
       </div>
-                <img src="/Assets/1st-comp/Mask Group.png" alt="Building Icon" className="icon-img" />
+                <img src="/Assets/1st-comp/Mask Group.png" alt="Building Icon" className="cloud-img" />
 
       
 

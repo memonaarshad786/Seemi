@@ -1,0 +1,185 @@
+.seemi-hero {
+  position: relative;
+  width: 1920px;
+  height: 1000px;
+  background: #A7AFFD;
+  overflow: hidden;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* ================= LOGO ================= */
+
+.seemi-logo {
+  position: absolute;
+  width: 264px;
+  height: 57px;
+  top: 223px;
+  left: 290px;
+}
+
+/* ================= HAT IMAGE ================= */
+
+.comp-1-firstimg {
+  position: absolute;
+  width: 163px;
+  height: 162.43px;
+  top: 147px;
+  left: 696px;
+  padding: 31px 7px;
+}
+
+/* ================= RIGHT SMALL IMAGE ================= */
+
+.comp-1-secondimg {
+  position: absolute;
+  width: 150px;
+  height: 35px;
+  top: 480px;
+  left: 1673px;
+}
+
+/* ================= HERO TEXT ================= */
+
+.hero-text {
+  position: absolute;
+  top: 385px;
+  left: 290px;
+  width: 676px;
+}
+
+.hero-text h1 {
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 85px;
+  margin: 0;
+  color: #0F1E4A;
+}
+
+.hero-text h1 span {
+  color: #FF7A00;
+}
+
+.hero-text p {
+  position: absolute;
+  top: 289px;
+  width: 674px;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 100%;
+  margin: 0;
+  color: #0F1E4A;
+}
+
+/* ================= SIGNUP CARD ================= */
+
+.signup-card {
+  position: absolute;
+  width: 570px;
+  height: 774px;
+  top: 147px;
+  left: 1017px;
+  background: #EAECFF;
+  border-radius: 30px;
+  border: 9px solid #0F1E4A;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.signup-card h3 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.signup-card h3 span {
+  color: #FF7A00;
+}
+
+.signup-card input {
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  padding: 0 15px;
+  background: #A7AFFD;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+}
+
+/* ================= CHECKBOX ================= */
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* ================= BUTTON ================= */
+
+.create-btn {
+  margin-top: 20px;
+  height: 55px;
+  border-radius: 25px;
+  border: none;
+  background: #5B6BFF;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ================= CLOUD IMAGE ================= */
+
+.cloud-img {
+  position: absolute;
+  width: 1920px;
+  height: 281px;
+  bottom: 0;
+  left: 0;
+}
+/* ===== Font Awesome Icons ===== */
+
+.fa-hat {
+  position: absolute;
+  font-size: 70px;
+  top: 147px;
+  left: 696px;
+  color: white;
+}
+
+.fa-right-icon {
+  position: absolute;
+  font-size: 32px;
+  top: 480px;
+  left: 1673px;
+  color: white;
+}
+
+/* ===== Inputs with icons ===== */
+
+.input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrap i {
+  position: absolute;
+  left: 15px;
+  color: #5B6BFF;
+}
+
+.input-wrap input {
+  padding-left: 45px;
+}
+
+.eye-icon {
+  right: 15px;
+  left: auto;
+  cursor: pointer;
+}

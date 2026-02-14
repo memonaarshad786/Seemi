@@ -7,15 +7,12 @@ export default function FeatureShowcase() {
 
   return (
     <section className="feature-showcase">
-        
-        {/* Top decorative line and text */}
+         {/* Top decorative line and text */}
       <div className="top-section">
-        <div className="decorative-line"></div>
         <p className="intro-text">
           Gain valuable insights into your business operations with our in-depth reporting tools. 
           Track performance, monitor growth, and make data-driven decisions with ease.
         </p>
-        <div className="decorative-line"></div>
       </div>
       <div className="deco-top">
         <div className="deco-circle-large"></div>

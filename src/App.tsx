@@ -4,10 +4,12 @@ import SeamlessIntegrations from './components/SeamlessIntegrations'
 import NextSection from './components/NextSection'
 import './App.css'
 import ThirdComponent from './components/ThirdComponent'
+// import SeemiHero from './components/SeemiHero'
 
 function App() {
   return (
     <div className="app">
+      {/* <SeemiHero /> */}
       <LandingHero />
       <FeatureShowcase />
       <SeamlessIntegrations />
