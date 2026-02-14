@@ -14,6 +14,7 @@ export default function SeamlessIntegrations() {
 
       <div className="features-grid">
         {/* CARD 1 */}
+        <div className="feature-card-wrapper">
         <div className="feature-card">
           <div className="feature-number">01</div>
           <h3 className="feature-title">Lesson Scheduling & Calendar</h3>
@@ -68,8 +69,10 @@ export default function SeamlessIntegrations() {
             </div>
           </div>
         </div>
+        </div>
 
         {/* CARD 2 */}
+        <div className="feature-card-wrapper">
         <div className="feature-card">
           <div className="feature-number">02</div>
           <h3 className="feature-title">Billing & Payments</h3>
@@ -115,8 +118,10 @@ export default function SeamlessIntegrations() {
             </div>
           </div>
         </div>
+        </div>
 
         {/* CARD 3 */}
+        <div className="feature-card-wrapper">
         <div className="feature-card">
           <div className="feature-number">03</div>
           <h3 className="feature-title">Student & Lesson Tracking</h3>
@@ -171,8 +176,10 @@ export default function SeamlessIntegrations() {
             </div>
           </div>
         </div>
+        </div>
 
         {/* CARD 4 */}
+        <div className="feature-card-wrapper">
         <div className="feature-card">
           <div className="feature-number">04</div>
           <h3 className="feature-title">Parents & Students Portal</h3>
@@ -218,8 +225,10 @@ export default function SeamlessIntegrations() {
             </div>
           </div>
         </div>
+        </div>
 
         {/* CARD 5 */}
+        <div className="feature-card-wrapper">
         <div className="feature-card">
           <div className="feature-number">05</div>
           <h3 className="feature-title">Automated Communication</h3>
@@ -265,8 +274,10 @@ export default function SeamlessIntegrations() {
             </div>
           </div>
         </div>
+        </div>
 
         {/* CARD 6 */}
+        <div className="feature-card-wrapper">
         <div className="feature-card">
           <div className="feature-number">06</div>
           <h3 className="feature-title">Business Reports & Insights</h3>
@@ -316,6 +327,7 @@ export default function SeamlessIntegrations() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

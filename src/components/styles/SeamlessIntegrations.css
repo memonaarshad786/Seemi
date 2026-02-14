@@ -5,9 +5,9 @@
 }
 
 .integrations-header {
-  text-align: center;
-  margin-bottom: 4rem;
-  max-width: 800px;
+  /* text-align: left; */
+  /* margin-bottom: 4rem; */
+  /* max-width: 800px; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -55,6 +55,12 @@
   margin: 0 auto;
 }
 
+/* Wrapper container for proper z-index layering of dotted circles */
+.feature-card-wrapper {
+  position: relative;
+  /* No overflow hidden - lets circles extend naturally outside */
+}
+
 .feature-card {
   background: white;
   border-radius: 16px;
@@ -67,48 +73,14 @@
   flex-direction: column;
   gap: 1rem;
   position: relative;
+  z-index: 2;
   width: auto;
   height: auto;
   opacity: 1;
-
 }
 
-.feature-card:nth-child(1) {
-background: rgba(254, 236, 236, 1);
-}
-.feature-card:nth-child(2){
-  background: rgba(250, 252, 238, 1);
-}
-
-/* Specific styling to match design for the 3rd card */
-.feature-card:nth-child(3) {
-  background: #e9f5ff; /* light blue background */
-  padding: 1.75rem;
-  box-shadow: 0 8px 24px rgba(43, 155, 255, 0.08);
-}
-
-.feature-card:nth-child(4) {
-background: rgba(236, 254, 241, 1);
-}
-.feature-card:nth-child(5) {
-background: rgba(238, 238, 252, 1);
-}
-.feature-card:nth-child(6) {
-  background: rgba(251, 238, 238, 1);
-}
-.feature-card::before {
-  content: "";
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-}
-.team-tracking{
-  display: flex;
-}
-
-.feature-card::after {
+/* Dotted circles positioned behind the cards */
+.feature-card-wrapper::after {
   content: "";
   position: absolute;
   bottom: -30px;
@@ -118,39 +90,80 @@ background: rgba(238, 238, 252, 1);
   border-radius: 50%;
   border: 4px dotted;
   opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.feature-card:nth-child(1)::after {
-  border-color: #a78bfa;
-  
-}
-
-.feature-card:nth-child(2)::after {
-  border-color: #60a5fa;
-}
-
-.feature-card:nth-child(3)::after {
-  border-color: #34d399;
-}
-
-.feature-card:nth-child(4)::after {
-  border-color: #f59e0b;
-}
-
-.feature-card:nth-child(5)::after {
-  border-color: #ec4899;
-}
-
-.feature-card:nth-child(6)::after {
-  border-color: #14b8a6;
-}
-
-.feature-card:hover {
+/* Wrapper hover effect */
+.feature-card-wrapper:hover .feature-card {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
-.feature-number {
+/* Color circles by wrapper position */
+.feature-card-wrapper:nth-child(1)::after {
+  border-color: #a78bfa;
+}
+
+.feature-card-wrapper:nth-child(2)::after {
+  border-color: #60a5fa;
+}
+
+.feature-card-wrapper:nth-child(3)::after {
+  border-color: #34d399;
+}
+
+.feature-card-wrapper:nth-child(4)::after {
+  border-color: #f59e0b;
+}
+
+.feature-card-wrapper:nth-child(5)::after {
+  border-color: #ec4899;
+}
+
+.feature-card-wrapper:nth-child(6)::after {
+  border-color: #14b8a6;
+}
+
+/* Card background colors by wrapper position */
+.feature-card-wrapper:nth-child(1) .feature-card {
+  background: rgba(254, 236, 236, 1);
+}
+
+.feature-card-wrapper:nth-child(2) .feature-card {
+  background: rgba(250, 252, 238, 1);
+}
+
+.feature-card-wrapper:nth-child(3) .feature-card {
+  background: #e9f5ff;
+  padding: 1.75rem;
+  box-shadow: 0 8px 24px rgba(43, 155, 255, 0.08);
+}
+
+.feature-card-wrapper:nth-child(4) .feature-card {
+  background: rgba(236, 254, 241, 1);
+}
+
+.feature-card-wrapper:nth-child(5) .feature-card {
+  background: rgba(238, 238, 252, 1);
+}
+
+.feature-card-wrapper:nth-child(6) .feature-card {
+  background: rgba(251, 238, 238, 1);
+}
+
+.feature-card::before {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.team-tracking {
+  display: flex;
+}
   font-size: 1.5rem;
   font-weight: 700;
   color: #2d3748;

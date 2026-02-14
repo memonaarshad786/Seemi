@@ -1,28 +1,10 @@
 .third-container {
- width: 100%;
-  position: relative;
-  background: rgba(0, 42, 79, 1);
-  padding: 180px 80px 40px;
-  color: white;
-}
-.third-container::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -100px;
   width: 100%;
-  height: 200px;
-
-  /* CLOUD SHAPE */
-  background:
-    radial-gradient(circle at 100px 100px,
-      rgba(0, 42, 79, 1) 100px,
-      transparent 101px)
-    repeat-x;
-
-  background-size: 200px 200px;
-
-  z-index: 1;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 240px 80px 20px 80px;
+  color: white;
 }
 
 .third-content {
@@ -31,8 +13,6 @@
   gap: 60px;
   max-width: 1400px;
   margin: auto;
-    position: relative;
-  z-index: 2;
 }
 
 /* Left Section */
