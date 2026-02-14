@@ -89,7 +89,7 @@ const authSlice = createSlice({
         state.error = null
         state.success = false
       })
-      .addCase(signUpUser.fulfilled, (state, action) => {
+      .addCase(signUpUser.fulfilled, (state) => {
         state.loading = false
         state.success = true
         state.successMessage = 'Account created successfully!'
