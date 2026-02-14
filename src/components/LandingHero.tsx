@@ -1,33 +1,40 @@
 import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { updateFormField, signUpUser, clearError } from '../store/slices/authSlice'
+import { RootState, AppDispatch } from '../store/index'
 import './styles/LandingHero.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 
 
 export default function LandingHero() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    businessName: '',
-    businessSize: ''
-  })
-
+  const dispatch = useDispatch<AppDispatch>()
+  const { formData, loading, error, success, successMessage } = useSelector((state: RootState) => state.auth)
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
+    dispatch(updateFormField({ name, value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
+    
+    // Validate passwords match
+    if (formData.password !== formData.confirmPassword) {
+      alert('Passwords do not match!')
+      return
+    }
+    
+    // Dispatch signup action
+    const result = await dispatch(signUpUser(formData))
+    
+    if (result.meta.requestStatus === 'fulfilled') {
+      // Clear success message after 3 seconds
+      setTimeout(() => {
+        dispatch(clearError())
+      }, 3000)
+    }
   }
 
   return (
@@ -58,6 +65,20 @@ export default function LandingHero() {
           <div className="hero-right">
             <div className="signup-card">
               <h2>Get <span className="days-highlight">30 days</span> free!</h2>
+              
+              {error && (
+                <div className="alert alert-error">
+                  <i className="fas fa-exclamation-circle"></i>
+                  {error}
+                </div>
+              )}
+              
+              {success && successMessage && (
+                <div className="alert alert-success">
+                  <i className="fas fa-check-circle"></i>
+                  {successMessage}
+                </div>
+              )}
               
               <form onSubmit={handleSubmit} className="signup-form">
                 <div className="form-row">
@@ -145,7 +166,15 @@ export default function LandingHero() {
                   </label>
                 </div>
 
-                <button type="submit" className="signup-btn">Create My Tutor Account</button>
+                <button type="submit" className="signup-btn" disabled={loading}>
+                  {loading ? (
+                    <>
+                      <i className="fas fa-spinner fa-spin"></i> Creating Account...
+                    </>
+                  ) : (
+                    'Create My Tutor Account'
+                  )}
+                </button>
               </form>
             </div>
 
