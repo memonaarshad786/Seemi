@@ -8,8 +8,7 @@
   text-align: left;
   margin-bottom: 4rem;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+
 }
 .orange-arrow{
   position: absolute;
@@ -50,7 +49,7 @@
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 2.5rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -844,7 +843,7 @@ padding: 6px;
 
 .seamless-integrations {
   background: linear-gradient(135deg, #e8dff5 0%, #f0ebf8 100%);
-  padding: 4rem 2rem;
+  padding: 4rem 6rem;
   min-height: auto;
 }
 
@@ -852,8 +851,7 @@ padding: 6px;
   text-align: left;
   margin-bottom: 4rem;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+ 
 }
 
 .orange-arrow{

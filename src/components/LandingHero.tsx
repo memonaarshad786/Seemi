@@ -48,11 +48,11 @@ export default function LandingHero() {
 
             </div>
 
-            <h1 className="hero-title">
+            <p className="hero-title">
               Everything You Need<br/>
               To <span className="highlight">Manage & Grow</span><br/>
               Your Tutoring Business
-            </h1>
+            </p>
 
             <p className="hero-description">
               <strong>Seemi</strong> streamlines your tutoring business with real-time 
