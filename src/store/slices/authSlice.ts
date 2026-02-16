@@ -34,31 +34,26 @@ const initialState: AuthState = {
   successMessage: null
 }
 
-// Async thunk for signup API call
+// ✅ Updated async thunk to send JSON
 export const signUpUser = createAsyncThunk(
   'auth/signUpUser',
   async (formData: SignupFormData, { rejectWithValue }) => {
     try {
-      const formDataObj = new FormData()
-      formDataObj.append('firstName', formData.firstName)
-      formDataObj.append('lastName', formData.lastName)
-      formDataObj.append('email', formData.email)
-      formDataObj.append('password', formData.password)
-      formDataObj.append('confirmPassword', formData.confirmPassword)
-      formDataObj.append('businessName', formData.businessName)
-      formDataObj.append('businessSize', formData.businessSize)
-
-      const response = await fetch('https://seemli.mytutorpod.org/mtpsaas/public/api/v1/app/sign-up', {
-        method: 'POST',
-        body: formDataObj
-      })
-
-      if (!response.ok) {
-        const errorData = await response.json()
-        return rejectWithValue(errorData.message || 'Sign up failed')
-      }
+      const response = await fetch(
+        'https://seemli.mytutorpod.org/mtpsaas/public/api/v1/app/sign-up',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        }
+      )
 
       const data = await response.json()
+      if (!response.ok || !data.success) {
+        // Catch backend validation errors
+        return rejectWithValue(data.message || 'Sign up failed')
+      }
+
       return data
     } catch (error) {
       return rejectWithValue((error as Error).message || 'Network error')
@@ -72,14 +67,13 @@ const authSlice = createSlice({
   reducers: {
     updateFormField: (state, action) => {
       const { name, value } = action.payload
-      state.formData = {
-        ...state.formData,
-        [name]: value
-      }
+      state.formData = { ...state.formData, [name]: value }
     },
     resetForm: () => initialState,
     clearError: (state) => {
       state.error = null
+      state.successMessage = null
+      state.success = false
     }
   },
   extraReducers: (builder) => {
@@ -89,10 +83,10 @@ const authSlice = createSlice({
         state.error = null
         state.success = false
       })
-      .addCase(signUpUser.fulfilled, (state) => {
+      .addCase(signUpUser.fulfilled, (state, action) => {
         state.loading = false
         state.success = true
-        state.successMessage = 'Account created successfully!'
+        state.successMessage = action.payload.message || 'Account created successfully!'
         state.formData = initialState.formData
       })
       .addCase(signUpUser.rejected, (state, action) => {
